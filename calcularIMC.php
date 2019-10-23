@@ -1,5 +1,16 @@
 <?php
 require_once('IMC.php');
+
+$peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_INT);
+$altura = filter_input(INPUT_POST, "altura", FILTER_VALIDATE_INT);
+
+if(!$peso || !$altura)
+{
+    header('Location: index.php');
+    exit(0);
+}
+
+$imc = new IMC($peso, $altura);
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,11 +28,8 @@ require_once('IMC.php');
                     Resultado do seu IMC
                 </div>
                 <div class="card-body">
-                    <?php
-                    $imc = new IMC($_POST['peso'], $_POST['altura']);
-                    ?>
-                    <h3>Seu IMC é: <?php echo $imc->calcular(); ?></h3>
-                    <h3>Você está <?php echo $imc->mensagem(); ?></h3>
+                    <h3>Seu IMC é: <?= number_format($imc->calcular(), 2) ?></h3>
+                    <h3>Você está <?= $imc->mensagem() ?></h3>
                 </div>
             </div>
         </div>
