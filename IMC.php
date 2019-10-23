@@ -6,7 +6,7 @@ class IMC{
 
     public function __construct(float $p, float $a) {
         $this->peso = $p;
-        $this->altura = $a / 100;
+        $this->altura = $a;
     }
 
     public function calcular() : float {

@@ -16,12 +16,12 @@
                 <div class="card-body">
                     <form action="calcularIMC.php" method="POST">
                         <div class="form-group">
-                            <label for="altura">Altura</label>
-                            <input type="number" class="form-control" id="altura" name="altura" aria-describedby="emailHelp" required="required">
+                            <label for="altura">Altura(M)</label>
+                            <input type="number" class="form-control" id="altura" name="altura" aria-describedby="emailHelp" required="required" step="0.01">
                         </div>
                         <div class="form-group">
-                            <label for="peso">Peso</label>
-                            <input type="number" class="form-control" id="peso" name="peso" aria-describedby="emailHelp" required="required">
+                            <label for="peso">Peso(Kg)</label>
+                            <input type="number" class="form-control" id="peso" name="peso" aria-describedby="emailHelp" required="required " step="0.01">
                         </div>
                         <div class="form-group text-right">
                             <button class="btn btn-success" type="submit">
