@@ -1,8 +1,8 @@
 <?php
 require_once('IMC.php');
 
-$peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_INT);
-$altura = filter_input(INPUT_POST, "altura", FILTER_VALIDATE_INT);
+$peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_FLOAT);
+$altura = filter_input(INPUT_POST, "altura", FILTER_VALIDATE_FLOAT);
 
 if(!$peso || !$altura)
 {
