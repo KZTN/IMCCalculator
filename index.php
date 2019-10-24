@@ -1,7 +1,18 @@
+<?php  require_once("Data.php");
+if (file_exists($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin')) {
+    // begin desserialização...
+    $file = fopen($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin', 'r');
+    $content = fread($file, filesize($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin'));
+    $data = unserialize($content);
+    fclose($file);
+    // end
+} else {
+    $data = new Data();
+}?>
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <!-- As a link -->
@@ -31,7 +42,27 @@
                     </form>
                 </div>
             </div>
+            <div  class=" text-center justify-content-center py-5">
+                <img style="width: 500px;" src="src/img/romao.jpg" alt="Romão">
+            </div>
         </div>
-        <script src="bootstrap.min.js"></script>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4 lighten-5 fixed-bottom">
+    <div style="background-color: #6351ce">
+    <div class="d-flex flex-column align-items-center" style="color: #fff;">
+        <p>Há um total de <?= $data->getGuests();?> requisições de cálculos de IMC</p>
+        <p>A média de IMC dos usuários que utilizaram esta calculadora é de <?= round($data->CalculateData(), 2);?></p>
+    </div>
+    </div>
+  <div style="background-color: #ccc;">
+      <!-- Grid row-->
+      <div class="footer-copyright text-center py-1">
+        <!-- Grid column -->
+        © 2019 Copyright <a href="https://github.com/KZTN">KZTN - TSI</a>
+    </div>
+    </div>
+</footer>
+<!-- Footer -->
+        <script src="../lib/bootstrap.min.js"></script>
     </body>
 </html>

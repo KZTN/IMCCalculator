@@ -15,13 +15,13 @@ class IMC{
 
     public function mensagem() : string {
         if ($this->calcular() <18.5) {
-            return "Abaixo do peso";
+            return "Você está abaixo do peso";
         } elseif ($this->calcular() >= 18.5 && $this->calcular() <= 24.9) {
-            return "Normal";
+            return "Seu peso está normal";
         } elseif ($this->calcular() >= 25 && $this->calcular() < 29.9) {
-            return "Sobre peso";
+            return "Você está com sobrepeso";
         } else {
-            return "Obesidade";
+            return "Você está obeso";
         }
     }
 }
