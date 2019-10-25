@@ -18,5 +18,8 @@ class SQLConnection {
        $query = mysqli_query($this->conn, "SELECT * FROM Data") or die ($this->conn->error);
         return  mysqli_fetch_array($query);
     }
+    public function InsertTable($guests, $imc) {
+        mysqli_query($this->conn, "UPDATE `Data` SET `guests`=".$guests.",`sum_imc`=".$imc." WHERE 1") or die("Connect failed: %s\n". $this->conn -> error);
+    }
 }
     ?>

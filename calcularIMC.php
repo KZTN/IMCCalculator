@@ -1,6 +1,7 @@
 <?php
 require_once("IMC.php");
 require_once("Data.php");
+require_once("SQLConnection.php");
 $peso = filter_input(INPUT_POST, "peso", FILTER_VALIDATE_FLOAT);
 $altura = filter_input(INPUT_POST, "altura", FILTER_VALIDATE_FLOAT);
 
@@ -8,22 +9,14 @@ if(!$peso || !$altura) {
     header('Location: index.php');
     exit(0);
 }
-if (file_exists($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin')) {
-    // begin desserialização...
-    $file = fopen($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin', 'r');
-    $content = fread($file, filesize($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin'));
-    $data = unserialize($content);
-    fclose($file);
-    // end
-} else {
-    $data = new Data();
-}
+
+$sqlconnection = new SQLConnection();
+$sqlconnection->OpenCon();
+$result = $sqlconnection->GETTable();
+$data = new Data($result["guests"], $result["sum_imc"]);
 $imc = new IMC($peso, $altura);
 $data->incrementaIMC($imc->calcular());
-$file = fopen($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin', 'w');
-$content = serialize($data);
-fwrite($file, $content);
-fclose($file);
+$sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
 ?>
 <!DOCTYPE html>
 <html>
