@@ -1,4 +1,6 @@
-<?php  require_once("Data.php");
+<?php  
+require_once("Data.php");
+require_once("SQLConnection.php");
 if (file_exists($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin')) {
     // begin desserialização...
     $file = fopen($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin', 'r');
@@ -8,7 +10,10 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] .'/src/resources/data.bin')) {
     // end
 } else {
     $data = new Data();
-}?>
+}
+$sqlconnection = new SQLConnection();
+$sqlconnection->OpenCon();
+?>
 <!DOCTYPE html>
 <html>
     <head>
