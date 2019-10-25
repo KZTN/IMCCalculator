@@ -40,7 +40,6 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
         <meta property="twitter:description" content="A balança já não te dá o peso, te dá os pêsames...">
         <meta property="twitter:image" content="">
         <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
-        <meta name=”description” content= ”Also want these pretty website previews?” />
     </head>
     <body>
         <!-- As a link -->
