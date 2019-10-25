@@ -21,7 +21,26 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
 <!DOCTYPE html>
 <html>
     <head>
+                <!-- Primary Meta Tags -->
+        <title>Calculadora de Romão</title>
+        <meta name="title" content="Calculadora de Romão">
+        <meta name="description" content="A balança já não te dá o peso, te dá os pêsames...">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://calculadoraimc.herokuapp.com/index.php">
+        <meta property="og:title" content="Calculadora de Romão">
+        <meta property="og:description" content="A balança já não te dá o peso, te dá os pêsames...">
+        <meta property="og:image" content="">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://calculadoraimc.herokuapp.com/index.php">
+        <meta property="twitter:title" content="Calculadora de Romão">
+        <meta property="twitter:description" content="A balança já não te dá o peso, te dá os pêsames...">
+        <meta property="twitter:image" content="">
         <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <meta name=”description” content= ”Also want these pretty website previews?” />
     </head>
     <body>
         <!-- As a link -->
