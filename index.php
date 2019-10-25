@@ -10,7 +10,25 @@ $data = new Data($result["guests"], $result["sum_imc"]);
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" >
+
+        <title>Calculadora de Romão</title>
+        <meta property="description" content="A balança já não te dá o peso, te dá os pêsames...">
+        <meta property="title" content="Calculadora de Romão">
+        <meta property="type" content="website">
+        <meta property="url" content="https://calculadoraimc.herokuapp.com/">
+        <meta property="image" content="https://calculadoraimc.herokuapp.com/src/img/romao.jpg">
+
+        <meta property="og:title" content="Calculadora de Romão">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://calculadoraimc.herokuapp.com/">
+        <meta property="og:description" content="A balança já não te dá o peso, te dá os pêsames...">
+        <meta property="og:image" content="https://calculadoraimc.herokuapp.com/src/img/romao.jpg">
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="600" />
     </head>
     <body>
         <!-- As a link -->

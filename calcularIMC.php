@@ -21,7 +21,7 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">y
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" >
