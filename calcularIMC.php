@@ -23,6 +23,12 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
     <head>
         <!-- Primary Meta Tags -->
         <title>Calculadora de Romão</title>
+        <meta property="description" content="A balança já não te dá o peso, te dá os pêsames...">
+        <meta property="title" content="Calculadora de Romão">
+        <meta property="type" content="website">
+        <meta property="url" content="https://calculadoraimc.herokuapp.com/">
+        <meta property="image" content="https://calculadoraimc.herokuapp.com/src/img/romao.jpg">
+
         <meta property="og:title" content="Calculadora de Romão">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://calculadoraimc.herokuapp.com/">
