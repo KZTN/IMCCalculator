@@ -28,18 +28,19 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://calculadoraimc.herokuapp.com/index.php">
+        <meta property="og:url" content="https://calculadoraimc.herokuapp.com">
         <meta property="og:title" content="Calculadora de Romão">
         <meta property="og:description" content="A balança já não te dá o peso, te dá os pêsames...">
-        <meta property="og:image" content="">
+        <meta property="og:image" content="https://calculadoraimc.herokuapp.com/src/img/romao.jpg">
         
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://calculadoraimc.herokuapp.com/index.php">
+        <meta property="twitter:url" content="https://calculadoraimc.herokuapp.com">
         <meta property="twitter:title" content="Calculadora de Romão">
         <meta property="twitter:description" content="A balança já não te dá o peso, te dá os pêsames...">
-        <meta property="twitter:image" content="">
+        <meta property="twitter:image" content="https://calculadoraimc.herokuapp.com/src/img/romao.jpg">
         <link href="../lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
     </head>
     <body>
         <!-- As a link -->
