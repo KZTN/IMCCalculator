@@ -21,6 +21,7 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Primary Meta Tags -->
         <title>Calculadora de Romão</title>
         <meta property="description" content="A balança já não te dá o peso, te dá os pêsames...">
