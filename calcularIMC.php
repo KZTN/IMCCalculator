@@ -37,7 +37,7 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
                     <h3>Seu IMC é: <?= number_format($imc->calcular(), 2) ?></h3>
                     <h3><?= $imc->mensagem() ?></h3>
                     <?php 
-                        $sort = rand(1, 2);
+                        $sort = rand(1, 3);
                         if($imc->mensagem() == "Você está com sobrepeso") {
                             echo("<img style='width: 300px;'src='src/img/gatogordo$sort.jpg'>");
                         }
