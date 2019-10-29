@@ -41,7 +41,7 @@ $data = new Data($result["guests"], $result["sum_imc"]);
                     Calcule seu IMC
                 </div>
                 <div class="card-body">
-                    <form action="calcularIMC.php" method="POST">
+                    <form action="calcularIMC" method="POST">
                         <div class="form-group">
                             <label for="altura">Altura(M)</label>
                             <input type="number" class="form-control" id="altura" name="altura" aria-describedby="emailHelp" required="required" step="0.01">
