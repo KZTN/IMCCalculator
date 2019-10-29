@@ -57,7 +57,7 @@ $sqlconnection->InsertTable($data->getGuests(), $data->getSum_imc());
                 </div>
             </div>
             <div class="text-center py-5">
-            <form action="index.php" method="post">
+            <form action="index" method="post">
                 <button class="btn btn-success" type="submit">Voltar ao início</button></form></div>
 
         </div>
